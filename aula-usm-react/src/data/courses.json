@@ -1,0 +1,284 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "code": "202601",
+      "courseCode": "FIS110",
+      "name": "FÍSICA GENERAL I",
+      "category": "FISICA",
+      "parallel": "Paralelos:1",
+      "department": "FISICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 2,
+      "code": "202601",
+      "courseCode": "FIS220",
+      "name": "FÍSICA GENERAL II",
+      "category": "FISICA",
+      "parallel": "Paralelos:2",
+      "department": "FISICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 3,
+      "code": "202601",
+      "courseCode": "MAT100",
+      "name": "CÁLCULO I",
+      "category": "MATEMATICA",
+      "parallel": "Paralelos:1",
+      "department": "MATEMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 4,
+      "code": "202601",
+      "courseCode": "MAT110",
+      "name": "ÁLGEBRA LINEAL",
+      "category": "MATEMATICA",
+      "parallel": "Paralelos:3",
+      "department": "MATEMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 5,
+      "code": "202601",
+      "courseCode": "MAT200",
+      "name": "CÁLCULO II",
+      "category": "MATEMATICA",
+      "parallel": "Paralelos:2",
+      "department": "MATEMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 6,
+      "code": "202601",
+      "courseCode": "ELO110",
+      "name": "INTRODUCCIÓN A LA ELECTRÓNICA",
+      "category": "ELECTRONICA",
+      "parallel": "Paralelos:1",
+      "department": "ELECTRONICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 7,
+      "code": "202601",
+      "courseCode": "ELO220",
+      "name": "CIRCUITOS ELECTRÓNICOS",
+      "category": "ELECTRONICA",
+      "parallel": "Paralelos:2",
+      "department": "ELECTRONICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 8,
+      "code": "202601",
+      "courseCode": "ELO330",
+      "name": "SISTEMAS DIGITALES",
+      "category": "ELECTRONICA",
+      "parallel": "Paralelos:1",
+      "department": "ELECTRONICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 9,
+      "code": "202601",
+      "courseCode": "TEL240",
+      "name": "REDES DE COMPUTADORES",
+      "category": "TELEMATICA",
+      "parallel": "Paralelos:1",
+      "department": "TELEMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 10,
+      "code": "202601",
+      "courseCode": "TEL341",
+      "name": "SIMULACIÓN DE REDES",
+      "category": "TELEMATICA",
+      "parallel": "Paralelos:1",
+      "department": "TELEMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 11,
+      "code": "202601",
+      "courseCode": "TEL360",
+      "name": "PENSAMIENTO DE DISEÑO EN INGENIERÍA",
+      "category": "TELEMATICA",
+      "parallel": "Paralelos:1",
+      "department": "TELEMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 12,
+      "code": "202601",
+      "courseCode": "INF100",
+      "name": "INTRODUCCIÓN A LA PROGRAMACIÓN",
+      "category": "INFORMATICA",
+      "parallel": "Paralelos:2",
+      "department": "INFORMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 13,
+      "code": "202601",
+      "courseCode": "INF210",
+      "name": "ESTRUCTURA DE DATOS",
+      "category": "INFORMATICA",
+      "parallel": "Paralelos:1",
+      "department": "INFORMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 14,
+      "code": "202601",
+      "courseCode": "INF322",
+      "name": "DISEÑO DE INTERFACES USUARIAS",
+      "category": "INFORMATICA",
+      "parallel": "Paralelos:1",
+      "department": "INFORMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 15,
+      "code": "202601",
+      "courseCode": "INF410",
+      "name": "BASES DE DATOS",
+      "category": "INFORMATICA",
+      "parallel": "Paralelos:1",
+      "department": "INFORMATICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 16,
+      "code": "202601",
+      "courseCode": "ICN220",
+      "name": "PROCESOS INDUSTRIALES",
+      "category": "INDUSTRIAS",
+      "parallel": "Paralelos:1",
+      "department": "INDUSTRIAS",
+      "semester": "2026-01"
+    },
+    {
+      "id": 17,
+      "code": "202601",
+      "courseCode": "ICN330",
+      "name": "AUTOMATIZACIÓN INDUSTRIAL",
+      "category": "INDUSTRIAS",
+      "parallel": "Paralelos:2",
+      "department": "INDUSTRIAS",
+      "semester": "2026-01"
+    },
+    {
+      "id": 18,
+      "code": "202601",
+      "courseCode": "ICN440",
+      "name": "OPTIMIZACIÓN DE PROCESOS",
+      "category": "INDUSTRIAS",
+      "parallel": "Paralelos:1",
+      "department": "INDUSTRIAS",
+      "semester": "2026-01"
+    },
+    {
+      "id": 19,
+      "code": "202601",
+      "courseCode": "QUI100",
+      "name": "QUÍMICA GENERAL",
+      "category": "QUIMICA",
+      "parallel": "Paralelos:2",
+      "department": "QUIMICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 20,
+      "code": "202601",
+      "courseCode": "QUI210",
+      "name": "QUÍMICA ORGÁNICA",
+      "category": "QUIMICA",
+      "parallel": "Paralelos:1",
+      "department": "QUIMICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 21,
+      "code": "202601",
+      "courseCode": "QUI320",
+      "name": "QUÍMICA ANALÍTICA",
+      "category": "QUIMICA",
+      "parallel": "Paralelos:1",
+      "department": "QUIMICA",
+      "semester": "2026-01"
+    },
+    {
+      "id": 22,
+      "code": "202602",
+      "courseCode": "FIS330",
+      "name": "ONDAS Y ÓPTICA",
+      "category": "FISICA",
+      "parallel": "Paralelos:1",
+      "department": "FISICA",
+      "semester": "2026-02"
+    },
+    {
+      "id": 23,
+      "code": "202602",
+      "courseCode": "MAT150",
+      "name": "CÁLCULO III",
+      "category": "MATEMATICA",
+      "parallel": "Paralelos:1",
+      "department": "MATEMATICA",
+      "semester": "2026-02"
+    },
+    {
+      "id": 24,
+      "code": "202602",
+      "courseCode": "ELO440",
+      "name": "ELECTROMAGNÉTICA",
+      "category": "ELECTRONICA",
+      "parallel": "Paralelos:1",
+      "department": "ELECTRONICA",
+      "semester": "2026-02"
+    },
+    {
+      "id": 25,
+      "code": "202602",
+      "courseCode": "TEL450",
+      "name": "COMUNICACIONES",
+      "category": "TELEMATICA",
+      "parallel": "Paralelos:1",
+      "department": "TELEMATICA",
+      "semester": "2026-02"
+    },
+    {
+      "id": 26,
+      "code": "202602",
+      "courseCode": "INF500",
+      "name": "INGENIERÍA DE SOFTWARE",
+      "category": "INFORMATICA",
+      "parallel": "Paralelos:1",
+      "department": "INFORMATICA",
+      "semester": "2026-02"
+    },
+    {
+      "id": 27,
+      "code": "202602",
+      "courseCode": "ICN550",
+      "name": "CONTROL DE CALIDAD",
+      "category": "INDUSTRIAS",
+      "parallel": "Paralelos:1",
+      "department": "INDUSTRIAS",
+      "semester": "2026-02"
+    },
+    {
+      "id": 28,
+      "code": "202602",
+      "courseCode": "QUI410",
+      "name": "FISICOQUÍMICA",
+      "category": "QUIMICA",
+      "parallel": "Paralelos:1",
+      "department": "QUIMICA",
+      "semester": "2026-02"
+    }
+  ]
+}
