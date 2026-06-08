@@ -1,3 +1,6 @@
+/* ==========================================
+   VARIABLES DE DISEÑO INSTITUCIONAL (RAÍZ)
+   ========================================== */
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -7,29 +10,26 @@
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
   --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
 
   font: 16px/1.5 var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light;
   color: var(--text);
   background: var(--bg);
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   @media (max-width: 1024px) {
     font: 14px/1.5 var(--sans);
   }
 }
 
+/* ==========================================
+   RESET DE NAVEGADOR Y MAQUETA GLOBAL
+   ========================================== */
 * {
   margin: 0;
   padding: 0;
@@ -47,12 +47,7 @@ body {
   font-family: var(--sans);
 }
 
-body {
-  margin: 0;
-}
-
-h1,
-h2 {
+h1, h2, h3 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
@@ -67,91 +62,6 @@ h1 {
     margin: 20px 0;
   }
 }
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-}
-
-.hero {
-  position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
-}
 
 #app {
   width: 1126px;
@@ -162,7 +72,6 @@ code {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
 #center {
@@ -172,134 +81,19 @@ code {
   place-content: center;
   place-items: center;
   flex-grow: 1;
-
   @media (max-width: 1024px) {
     padding: 32px 20px 24px;
     gap: 18px;
   }
 }
 
-#next-steps {
-  display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-}
-
-#next-steps ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
-}
-
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
-}
-
-.ticks {
-  position: relative;
-  width: 100%;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
-
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
-  }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
-  }
-}
 /* ==========================================
-   NUEVOS ESTILOS: NOTIFICACIONES Y MENSAJES
+   COMPONENTES DESPLEGABLES: NOTIFICACIONES / MENSAJES
    ========================================== */
-
-/* Contenedor base para ambos paneles (Derecha y Flotante) */
 .notifications-panel,
 .messages-sidebar-panel {
   position: fixed;
-  top: 70px; /* Ajusta esto según el alto de tu Header para que no lo tape */
+  top: 70px;
   right: 20px;
   width: 380px;
   max-height: calc(100vh - 90px);
@@ -310,11 +104,10 @@ code {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  text-align: left; /* Resetea el centrado de #app */
+  text-align: left;
   overflow: hidden;
 }
 
-/* Modificación específica para Mensajes: Comportamiento Sidebar Lateral completo */
 .messages-sidebar-panel {
   top: 0;
   right: 0;
@@ -322,11 +115,11 @@ code {
   height: 100vh;
   max-height: 100vh;
   border-radius: 0;
-  border-y: none;
+  border-top: none;
+  border-bottom: none;
   border-right: none;
 }
 
-/* Encabezados de los Paneles */
 .panel-header {
   display: flex;
   justify-content: space-between;
@@ -336,10 +129,8 @@ code {
   background: var(--bg);
 
   h3, .chat-header-title {
-    font-family: var(--heading);
     font-size: 18px;
     font-weight: 600;
-    color: var(--text-h);
   }
 }
 
@@ -352,14 +143,12 @@ code {
   padding: 4px 8px;
   border-radius: 4px;
   transition: background 0.2s;
-
   &:hover {
     background: var(--code-bg);
     color: var(--text-h);
   }
 }
 
-/* Buscador de Mensajes */
 .messages-search {
   display: flex;
   padding: 12px 16px;
@@ -373,13 +162,10 @@ code {
   padding: 8px 12px;
   border: 1px solid var(--border);
   border-radius: 6px;
+  outline: none;
   font-family: var(--sans);
   font-size: 14px;
-  outline: none;
-
-  &:focus {
-    border-color: var(--accent);
-  }
+  &:focus { border-color: var(--accent); }
 }
 
 .messages-search-btn {
@@ -391,7 +177,6 @@ code {
   &:hover { background: var(--border); }
 }
 
-/* Pestaña/Separadores de secciones */
 .messages-contacts-tab {
   padding: 10px 16px;
   background: var(--code-bg);
@@ -401,7 +186,6 @@ code {
   border-bottom: 1px solid var(--border);
 }
 
-/* Listas internas scrolleables */
 .notifications-list,
 .messages-list {
   flex: 1;
@@ -418,7 +202,6 @@ code {
   border-bottom: 1px solid var(--border);
 }
 
-/* Items individuales (Notificación / Mensaje corto) */
 .notification-item,
 .message-item {
   display: flex;
@@ -428,10 +211,7 @@ code {
   transition: background-color 0.2s;
   text-decoration: none;
   color: inherit;
-
-  &:hover {
-    background-color: var(--accent-bg) !important; /* Destaca suave con tu color acento al pasar el mouse */
-  }
+  &:hover { background-color: var(--accent-bg) !important; }
 }
 
 .notification-content,
@@ -458,19 +238,16 @@ code {
 .message-status {
   font-size: 11px;
   color: var(--text);
-  margin-top: 2px;
 }
 
 .notification-link {
   font-size: 12px;
   color: var(--accent);
   text-decoration: none;
-  align-self: flex-start;
   margin-top: 4px;
   &:hover { text-decoration: underline; }
 }
 
-/* Contenedor de Avatar y puntito online/no leído */
 .message-avatar-container {
   position: relative;
   display: inline-flex;
@@ -482,18 +259,16 @@ code {
   right: -2px;
   width: 10px;
   height: 10px;
-  background-color: #22c55e; /* Verde de Moodle */
+  background-color: #22c55e;
   border-radius: 50%;
   border: 2px solid var(--bg);
 }
 
-/* Footer de los paneles */
 .panel-footer {
   padding: 12px;
   text-align: center;
   border-top: 1px solid var(--border);
   background: var(--bg);
-
   .view-all {
     color: var(--accent);
     text-decoration: none;
@@ -504,7 +279,7 @@ code {
 }
 
 /* ==========================================
-   VISTA INTERNA DEL CHAT ABIERTO
+   VISTA INTERNA: CHAT DE MENSAJERÍA ACTIVO
    ========================================== */
 .chat-window-view {
   display: flex;
@@ -526,7 +301,6 @@ code {
   display: flex;
   width: 100%;
 }
-
 .own-msg { justify-content: flex-end; }
 .their-msg { justify-content: flex-start; }
 
@@ -573,7 +347,6 @@ code {
     border: 1px solid var(--border);
     border-radius: 20px;
     outline: none;
-    font-family: var(--sans);
     font-size: 14px;
     &:focus { border-color: var(--accent); }
   }
@@ -586,11 +359,13 @@ code {
     border-radius: 20px;
     font-weight: 500;
     cursor: pointer;
-    transition: opacity 0.2s;
     &:hover { opacity: 0.9; }
   }
 }
-/* Estilo para las pelotitas rojas de notificación (limpieza de código) */
+
+/* ==========================================
+   ESTILOS DE BARRA SUPERIOR (HEADER INTERNO)
+   ========================================== */
 .badge-red {
   position: absolute;
   top: 2px;
@@ -605,50 +380,35 @@ code {
   pointer-events: none;
 }
 
-/* Contenedor del perfil en la barra superior */
-.header-profile-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.header-nav-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 20px;
-  transition: background-color 0.2s;
   user-select: none;
-  margin-left: 8px;
+  position: relative;
+  padding: 6px 0;
+  &:hover { color: var(--text-h); }
+}
 
-  &:hover {
-    background-color: var(--code-bg);
+.header-nav-item.active {
+  color: var(--accent);
+  font-weight: 600;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent);
+    border-radius: 2px;
   }
 }
 
-/* Texto de saludo */
-.profile-greeting {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-h);
-  font-family: var(--sans);
-}
-
-/* Imagen circular de la foto de perfil */
-.header-profile-img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--border);
-}
-
-/* Flecha hacia abajo */
-.profile-caret {
-  font-size: 10px;
-  color: var(--text);
-  transition: transform 0.2s;
-}
 /* ==========================================
-   ESTILOS DE MAQUETACIÓN DEL CALENDARIO ÚNICO
+   VISTA: CALENDARIO ACADÉMICO ÚNICO
    ========================================== */
-
 .calendar-navigation-header {
   display: flex;
   justify-content: space-between;
@@ -660,7 +420,6 @@ code {
   font-size: 26px;
   font-weight: bold;
   text-transform: capitalize;
-  color: var(--text-h);
 }
 
 .nav-month-btn {
@@ -688,7 +447,6 @@ code {
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
-  transition: opacity 0.2s;
   &:hover { opacity: 0.9; }
 }
 
@@ -696,9 +454,8 @@ code {
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 0;
-  overflow: hidden;
   box-shadow: var(--shadow);
+  overflow: hidden;
 }
 
 .weekdays-header {
@@ -710,14 +467,12 @@ code {
   font-size: 14px;
   background: #fafafa;
   border-bottom: 1px solid var(--border);
-  color: var(--text-h);
 }
 
 .days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 0; /* Sin separación para simular líneas continuas de tabla */
-  background: var(--border); /* El color del borde actúa de grilla */
+  background: var(--border);
 }
 
 .day-cell, .empty-day {
@@ -726,12 +481,8 @@ code {
   padding: 8px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
-
-.empty-day {
-  background: #fafafa;
-}
+.empty-day { background: #fafafa; }
 
 .day-number {
   font-size: 13px;
@@ -740,13 +491,10 @@ code {
   margin-bottom: 6px;
 }
 
-/* Indicador circular azul para el día seleccionado (ej: día 7) */
-.today-highlight {
-  background-color: #f8fafc;
-}
+.today-highlight { background-color: #f8fafc; }
 
 .today-number-badge {
-  background-color: #0c4a6e; /* Azul oscuro Moodle */
+  background-color: #0c4a6e;
   color: white !important;
   border-radius: 50%;
   width: 24px;
@@ -757,7 +505,6 @@ code {
   font-weight: bold;
 }
 
-/* Lista de eventos del casillero */
 .day-events-list {
   width: 100%;
   display: flex;
@@ -765,7 +512,6 @@ code {
   gap: 4px;
 }
 
-/* Estilo de la barrita del evento (Texto plano, no cliqueable) */
 .calendar-event-tag {
   color: #1e3a8a;
   font-size: 12px;
@@ -773,20 +519,17 @@ code {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 100%;
-  cursor: default; /* ← Fuerza a que el cursor sea la flecha normal, no la mano */
-  user-select: none; /* ← Opcional: evita que se seleccione el texto por accidente */
+  cursor: default;
+  user-select: none;
 }
 
 .event-bullet {
-  color: #ea580c; /* Puntito naranja */
+  color: #ea580c;
   font-weight: bold;
   margin-right: 2px;
 }
 
-/* ==========================================
-   ESTILOS DEL POP-UP (MODAL INTERACTIVO)
-   ========================================== */
+/* Pop-up modal del calendario */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -807,7 +550,6 @@ code {
   border-radius: 8px;
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.15);
   overflow: hidden;
-  text-align: left;
 }
 
 .modal-header {
@@ -816,8 +558,7 @@ code {
   align-items: center;
   padding: 16px;
   border-bottom: 1px solid var(--border);
-  
-  h3 { font-size: 18px; color: var(--text-h); }
+  h3 { font-size: 18px; }
 }
 
 .close-modal-x {
@@ -825,7 +566,6 @@ code {
   border: none;
   font-size: 16px;
   cursor: pointer;
-  color: var(--text);
 }
 
 .modal-form-body {
@@ -839,15 +579,12 @@ code {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  
-  label { font-size: 13px; font-weight: 500; color: var(--text-h); }
-  
+  label { font-size: 13px; font-weight: 500; }
   input, select {
     padding: 8px 12px;
     border: 1px solid var(--border);
     border-radius: 4px;
     font-size: 14px;
-    font-family: var(--sans);
     outline: none;
     &:focus { border-color: var(--accent); }
   }
@@ -863,7 +600,6 @@ code {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .cancel-btn {
@@ -872,7 +608,6 @@ code {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
   &:hover { background: #e5e7eb; }
 }
 
@@ -883,35 +618,20 @@ code {
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
   font-weight: 500;
   &:hover { opacity: 0.9; }
 }
 
 /* ==========================================
-   ESTILOS DE LA PÁGINA DE ASIGNATURA (DETALLE)
+   VISTA: PÁGINA INTERNA DE ASIGNATURAS (DETALLE)
    ========================================== */
-
 .course-page-container {
   width: 100%;
   text-align: left;
-  font-family: var(--sans);
 }
 
-.course-back-btn {
-  background: var(--code-bg);
-  border: 1px solid var(--border);
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 15px;
-  font-size: 13px;
-  &:hover { background: var(--border); }
-}
-
-/* Barra de Navegación Azul */
 .course-internal-nav {
-  background-color: #004fc5; /* Azul rey institucional Moodle */
+  background-color: #004fc5;
   display: flex;
   padding: 0 10px;
   gap: 4px;
@@ -924,8 +644,6 @@ code {
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
-
   &:hover {
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.1);
@@ -935,18 +653,15 @@ code {
 .nav-item.active {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: inset 0 -3px 0 #ffffff; /* Línea blanca inferior activa */
+  box-shadow: inset 0 -3px 0 #ffffff;
 }
 
-/* Título de la Asignatura */
 .course-main-title {
   font-size: 24px;
   font-weight: 500;
   margin: 24px 0 16px 0;
-  color: var(--text-h);
 }
 
-/* Pestañas horizontales */
 .course-tabs-header {
   display: flex;
   border-bottom: 2px solid var(--border);
@@ -964,8 +679,6 @@ code {
   cursor: pointer;
   border-radius: 4px 4px 0 0;
   margin-bottom: -2px;
-  transition: all 0.2s;
-
   &:hover {
     background-color: #f9f9f9;
     color: var(--text-h);
@@ -977,10 +690,9 @@ code {
   border-color: var(--border);
   color: var(--text-h);
   font-weight: 500;
-  box-shadow: 0 2px 0 #ffffff; /* Tapa la línea gris del contenedor inferior */
+  box-shadow: 0 2px 0 #ffffff;
 }
 
-/* Caja de contenido */
 .course-tab-content {
   background: #ffffff;
   border: 1px solid var(--border);
@@ -991,37 +703,21 @@ code {
   gap: 20px;
 }
 
-/* Cuadro Informativo con scroll */
 .info-scroll-box {
   border: 1px solid var(--border);
   border-radius: 4px;
   padding: 16px;
   max-height: 200px;
   overflow-y: auto;
-  background: #ffffff;
-
-  h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: var(--text-h);
-  }
-  p {
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: var(--text);
-  }
+  h3 { font-size: 18px; margin-bottom: 12px; }
+  p { font-size: 14px; margin-bottom: 6px; color: var(--text); }
 }
 
-/* Botón Marcar como Hecha */
-.action-row {
-  display: flex;
-  justify-content: flex-end;
-}
+.action-row { display: flex; justify-content: flex-end; }
 
 .mark-done-btn {
   background: #ffffff;
   border: 1px solid var(--border);
-  color: var(--text-h);
   padding: 6px 12px;
   border-radius: 4px;
   font-size: 13px;
@@ -1032,7 +728,6 @@ code {
   }
 }
 
-/* Descripción de la Asignatura */
 .course-description-box {
   font-size: 14px;
   line-height: 1.6;
@@ -1043,12 +738,10 @@ code {
   border-left: 4px solid var(--border);
 }
 
-/* Links Inferiores */
 .course-links-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 10px;
 }
 
 .course-link-item {
@@ -1056,11 +749,6 @@ code {
   align-items: center;
   gap: 10px;
   font-size: 14px;
-
-  .link-icon {
-    font-size: 16px;
-  }
-
   a {
     color: #004fc5;
     text-decoration: none;
@@ -1074,67 +762,28 @@ code {
   color: var(--text);
   font-style: italic;
 }
-/* Links de navegación del Header global */
-.header-nav-item {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text);
-  cursor: pointer;
-  user-select: none;
-  position: relative;
-  padding: 6px 0;
-  transition: color 0.2s;
-
-  &:hover {
-    color: var(--text-h);
-  }
-}
-
-/* Estado Activo: Cambia el color del texto y añade la línea inferior morada */
-.header-nav-item.active {
-  color: var(--accent); /* Cambia al morado de tu paleta */
-  font-weight: 600;
-}
-
-.header-nav-item.active::after {
-  content: '';
-  position: absolute;
-  bottom: -2px; /* Ajusta esto para que calce al borde inferior de tu barra si es necesario */
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--accent);
-  border-radius: 2px;
-}
 
 /* ==========================================
-   ESTILOS DE LA PÁGINA CENTRAL DE DOCUMENTOS
+   VISTA: REPOSITORIO DE DOCUMENTOS CENTRALIZADOS
    ========================================== */
-
 .documents-page-container {
   width: 100%;
   text-align: left;
-  font-family: var(--sans);
 }
 
 .documents-page-header {
   margin-bottom: 24px;
-  h2 { font-size: 26px; margin-bottom: 6px; color: var(--text-h); }
+  h2 { font-size: 26px; margin-bottom: 6px; }
   p { font-size: 14px; color: var(--text); }
 }
 
-/* Grilla de Tarjetas por Asignatura */
 .documents-courses-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 Columnas anchas y cómodas */
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* 1 columna en pantallas móviles */
-  }
+  @media (max-width: 768px) { grid-template-columns: 1fr; }
 }
 
-/* Tarjeta del Curso */
 .document-course-card {
   background: #ffffff;
   border: 1px solid var(--border);
@@ -1145,7 +794,6 @@ code {
   overflow: hidden;
 }
 
-/* Cabecera de la Tarjeta */
 .doc-card-header {
   background: #fafafa;
   padding: 14px 16px;
@@ -1154,35 +802,28 @@ code {
   .doc-course-code {
     font-size: 11px;
     font-weight: bold;
-    color: var(--accent); /* Color morado */
+    color: var(--accent);
     display: block;
     margin-bottom: 2px;
   }
-  
   .doc-course-name {
     font-size: 15px;
     font-weight: 600;
-    color: var(--text-h);
     line-height: 1.3;
   }
 }
 
-/* Contenedor de la lista de archivos */
 .doc-files-list {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
 }
 
-/* Fila de Archivo Individual */
 .doc-file-item {
   display: flex;
   align-items: center;
   padding: 12px 16px;
   border-bottom: 1px solid #f5f5f5;
   gap: 12px;
-  transition: background-color 0.2s;
-
   &:last-child { border-bottom: none; }
   &:hover { background-color: #fafbfc; }
 }
@@ -1191,7 +832,6 @@ code {
   font-size: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .file-details {
@@ -1202,17 +842,29 @@ code {
   overflow: hidden;
 }
 
-/* Link del nombre del archivo */
 .file-name-link {
   font-size: 13px;
   font-weight: 500;
-  color: #004fc5; /* Azul de descargas Moodle */
+  color: #004fc5;
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
   &:hover { text-decoration: underline; }
+}
+
+.file-folder-path {
+  font-size: 11px;
+  color: #8c8594;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 1px 0 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
 }
 
 .file-meta {
@@ -1223,7 +875,6 @@ code {
   gap: 6px;
 }
 
-/* Badge pequeño gris para el tipo de extensión (PDF, ZIP...) */
 .file-type-badge {
   background: #f0f0f2;
   color: #444;
@@ -1233,7 +884,6 @@ code {
   font-size: 9px;
 }
 
-/* Botón flotante de descarga */
 .file-download-btn {
   background: none;
   border: none;
@@ -1241,23 +891,5 @@ code {
   cursor: pointer;
   padding: 6px;
   border-radius: 4px;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: var(--code-bg);
-  }
-}
-/* Ruta de carpetas interna de cada archivo descargable */
-.file-folder-path {
-  font-size: 11px;               /* Letra significativamente más pequeña */
-  color: #8c8594;                /* Un gris suave que reduce el contraste, usando tu paleta */
-  font-weight: 400;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin: 1px 0 3px 0;           /* Margen estratégico para separar del título y de los bytes */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;       /* Corta elegantemente si la ruta es muy larga */
-  max-width: 95%;
+  &:hover { background-color: var(--code-bg); }
 }
