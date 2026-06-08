@@ -887,3 +887,377 @@ code {
   font-weight: 500;
   &:hover { opacity: 0.9; }
 }
+
+/* ==========================================
+   ESTILOS DE LA PÁGINA DE ASIGNATURA (DETALLE)
+   ========================================== */
+
+.course-page-container {
+  width: 100%;
+  text-align: left;
+  font-family: var(--sans);
+}
+
+.course-back-btn {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 13px;
+  &:hover { background: var(--border); }
+}
+
+/* Barra de Navegación Azul */
+.course-internal-nav {
+  background-color: #004fc5; /* Azul rey institucional Moodle */
+  display: flex;
+  padding: 0 10px;
+  gap: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+.nav-item {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.nav-item.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 -3px 0 #ffffff; /* Línea blanca inferior activa */
+}
+
+/* Título de la Asignatura */
+.course-main-title {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 24px 0 16px 0;
+  color: var(--text-h);
+}
+
+/* Pestañas horizontales */
+.course-tabs-header {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  gap: 4px;
+  overflow-x: auto;
+}
+
+.tab-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-bottom: none;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: -2px;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #f9f9f9;
+    color: var(--text-h);
+  }
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  border-color: var(--border);
+  color: var(--text-h);
+  font-weight: 500;
+  box-shadow: 0 2px 0 #ffffff; /* Tapa la línea gris del contenedor inferior */
+}
+
+/* Caja de contenido */
+.course-tab-content {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cuadro Informativo con scroll */
+.info-scroll-box {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+  background: #ffffff;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--text-h);
+  }
+  p {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+}
+
+/* Botón Marcar como Hecha */
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mark-done-btn {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  cursor: pointer;
+  &:hover {
+    background: #f9f9f9;
+    border-color: #999;
+  }
+}
+
+/* Descripción de la Asignatura */
+.course-description-box {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background: #fcfcfc;
+  padding: 16px;
+  border-radius: 4px;
+  border-left: 4px solid var(--border);
+}
+
+/* Links Inferiores */
+.course-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.course-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+
+  .link-icon {
+    font-size: 16px;
+  }
+
+  a {
+    color: #004fc5;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.empty-tab-state {
+  padding: 40px;
+  text-align: center;
+  color: var(--text);
+  font-style: italic;
+}
+/* Links de navegación del Header global */
+.header-nav-item {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--text-h);
+  }
+}
+
+/* Estado Activo: Cambia el color del texto y añade la línea inferior morada */
+.header-nav-item.active {
+  color: var(--accent); /* Cambia al morado de tu paleta */
+  font-weight: 600;
+}
+
+.header-nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Ajusta esto para que calce al borde inferior de tu barra si es necesario */
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 2px;
+}
+
+/* ==========================================
+   ESTILOS DE LA PÁGINA CENTRAL DE DOCUMENTOS
+   ========================================== */
+
+.documents-page-container {
+  width: 100%;
+  text-align: left;
+  font-family: var(--sans);
+}
+
+.documents-page-header {
+  margin-bottom: 24px;
+  h2 { font-size: 26px; margin-bottom: 6px; color: var(--text-h); }
+  p { font-size: 14px; color: var(--text); }
+}
+
+/* Grilla de Tarjetas por Asignatura */
+.documents-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Columnas anchas y cómodas */
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* 1 columna en pantallas móviles */
+  }
+}
+
+/* Tarjeta del Curso */
+.document-course-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Cabecera de la Tarjeta */
+.doc-card-header {
+  background: #fafafa;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  
+  .doc-course-code {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--accent); /* Color morado */
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .doc-course-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-h);
+    line-height: 1.3;
+  }
+}
+
+/* Contenedor de la lista de archivos */
+.doc-files-list {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+/* Fila de Archivo Individual */
+.doc-file-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f5f5f5;
+  gap: 12px;
+  transition: background-color 0.2s;
+
+  &:last-child { border-bottom: none; }
+  &:hover { background-color: #fafbfc; }
+}
+
+.file-icon-wrapper {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.file-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow: hidden;
+}
+
+/* Link del nombre del archivo */
+.file-name-link {
+  font-size: 13px;
+  font-weight: 500;
+  color: #004fc5; /* Azul de descargas Moodle */
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  &:hover { text-decoration: underline; }
+}
+
+.file-meta {
+  font-size: 11px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Badge pequeño gris para el tipo de extensión (PDF, ZIP...) */
+.file-type-badge {
+  background: #f0f0f2;
+  color: #444;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 9px;
+}
+
+/* Botón flotante de descarga */
+.file-download-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--code-bg);
+  }
+}
+/* Ruta de carpetas interna de cada archivo descargable */
+.file-folder-path {
+  font-size: 11px;               /* Letra significativamente más pequeña */
+  color: #8c8594;                /* Un gris suave que reduce el contraste, usando tu paleta */
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 1px 0 3px 0;           /* Margen estratégico para separar del título y de los bytes */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;       /* Corta elegantemente si la ruta es muy larga */
+  max-width: 95%;
+}

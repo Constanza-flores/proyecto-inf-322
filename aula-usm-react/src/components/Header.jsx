@@ -3,7 +3,7 @@ import NotificationsPanel from './NotificationsPanel';
 import MessagesPanel from './MessagesPanel';
 import ProfileMenu from './ProfileMenu';
 
-function Header({ onSearch, onProfileClick, onLogoClick }) {
+function Header({ onSearch, onProfileClick, onLogoClick, onDocumentsClick, currentView }) {
   const [searchValue, setSearchValue] = useState('');
   const [showNotifications, setShowNotifications] = useState(false);
   const [showMessages, setShowMessages] = useState(false);
@@ -89,20 +89,32 @@ function Header({ onSearch, onProfileClick, onLogoClick }) {
       <header className="header">
         <div className="header-container">
           
-          {/* SECCIÓN DEL LOGO MODIFICADA */}
-          <div className="logo-section">
+          <div className="logo-section" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <div className="university-logo">
               <div 
                 className="logo-placeholder" 
-                onClick={onLogoClick} // ← AL HACER CLIC: Ejecuta la función para volver al home
-                style={{ 
-                  cursor: 'pointer',   // ← Muestra la mano interactiva
-                  userSelect: 'none'   // Evita que se seleccione el texto "USM" al clickear rápido
-                }}
+                onClick={onLogoClick}
+                style={{ cursor: 'pointer', userSelect: 'none' }}
               >
                 USM
               </div> 
             </div>
+
+            {/* NAVEGACIÓN SUPERIOR IZQUIERDA CON ESTILOS DINÁMICOS */}
+            <nav className="header-links-nav" style={{ display: 'flex', gap: '20px', height: '100%', alignItems: 'center' }}>
+              <span 
+                onClick={onLogoClick} 
+                className={`header-nav-item ${currentView === 'home' || currentView === 'course' ? 'active' : ''}`}
+              >
+                Página Principal
+              </span>
+              <span 
+                onClick={onDocumentsClick} 
+                className={`header-nav-item ${currentView === 'documents' ? 'active' : ''}`}
+              >
+                Documentos
+              </span>
+            </nav>
           </div>
           <div className="header-spacer"></div>
           <div className="header-icons">
